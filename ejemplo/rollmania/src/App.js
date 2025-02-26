@@ -9,19 +9,23 @@ function App() {
 	  <Dice />
 	  <Dice />
 	  <Dice />
+	<RollButton />
     </main>
   );
 }
 
-function Contador() {
-  const [numero, setNumero] = useState(5);
+function RollButton() {
+  const [contador, setContador] = useState(5);
+
+  useEffect(() => {
+    if (contador > 0) {
+      const timer = setTimeout(() => setContador(contador - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [contador]);
 
   return (
-    <section>
-      <button>Botón 1</button>
-      <button>Botón 2</button>
-      <p>{numero}</p>
-    </section>
+    <button>{contador > 0 ? contador : "Roll!!!"}</button>
   );
 }
 
