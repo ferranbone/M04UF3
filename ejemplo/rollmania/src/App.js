@@ -1,31 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Title from './Title.js';
 import Dice from './Dice.js';
-import React, { useState } from "react";
+import RollButton from './RollButton.js';
+import PlayerName from './PlayerName.js';
+
+
+
+import { useState } from 'react';
 
 function App() {
-  return (
-	<main className="App">
-	  <Dice />
-	  <Dice />
-	  <Dice />
-	<RollButton />
-    </main>
-  );
-}
 
-function RollButton() {
-  const [contador, setContador] = useState(5);
+	let [roll, setRoll] = useState(false);
 
-  useEffect(() => {
-    if (contador > 0) {
-      const timer = setTimeout(() => setContador(contador - 1), 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [contador]);
+	function roll_dice ()
+	{
+		setRoll(true);
+	}
 
   return (
-    <button>{contador > 0 ? contador : "Roll!!!"}</button>
+		<div className="rollmania">
+			<Title title_text="Rollmania!!!" />
+			<PlayerName />
+	    <main className="App">
+				<Dice cantidad="5" roll={roll} />
+    	</main>
+			<RollButton roll_func={roll_dice}/>
+		</div>
   );
 }
 
