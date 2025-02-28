@@ -1,14 +1,21 @@
-.Die {
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.Die {
 	display:flex;
 	justify-content:center;
 	align-items:center;
 	font-weight:bold;
 	font-size:48px;
-  width:128px;
-  height:128px;
-  background-color:blue;
-  color:#ffffffff;
-
+	width:128px;
+	height:128px;
+	background-color:blue;
+	color:#ffffff;
 }
 
-
+`, "",{"version":3,"sources":["webpack://./src/Die.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,sBAAsB;CACtB,kBAAkB;CAClB,gBAAgB;CAChB,cAAc;CACd,WAAW;CACX,YAAY;CACZ,qBAAqB;CACrB,aAAa;AACd","sourcesContent":[".Die {\n\tdisplay:flex;\n\tjustify-content:center;\n\talign-items:center;\n\tfont-weight:bold;\n\tfont-size:48px;\n\twidth:128px;\n\theight:128px;\n\tbackground-color:blue;\n\tcolor:#ffffff;\n}\n\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {};
+export default ___CSS_LOADER_EXPORT___;
