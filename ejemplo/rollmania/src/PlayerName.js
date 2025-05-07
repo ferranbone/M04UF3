@@ -5,8 +5,12 @@ function PlayerName(props) {
 	let [player_name, setPlayerName] = useState("");
 	let [show_name, setShowName] = useState(false);
 
+	useEffect( () => {
+		if (show_name)
+			props.onPlayerNameChange(player_name);
+	} );
+	
 	function update_name (event) {
-		console.log(event.target.value);
 		setPlayerName(event.target.value);
 	}
 
